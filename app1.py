@@ -13,8 +13,9 @@ x = st.slider('head',3,10)
 #def cargar():
 #    tienda = pd.read_csv("store_data.csv")
 #    return tienda
-vuelosTrain = st.cache(pd.read_csv)("vuelosTrain.csv")#, header=None)
+#vuelosTrain = st.cache(pd.read_csv)("vuelosTrain.csv")#, header=None)
+vuelosTrain = pd.read_csv("vuelosTrain.csv")#, header=None)
+#vuelosTrain = st.cache(vuelosTrain.drop(labels=["Unnamed: 0"],axis=1,inplace=True))
 vuelosTrain.drop(labels=["Unnamed: 0"],axis=1,inplace=True)
-#vuelosTest.drop(labels=["Unnamed: 0"],axis=1,inplace=True)
-vuelosTrain.head()
+#vuelosTrain.head()
 st.dataframe(vuelosTrain.head(x))

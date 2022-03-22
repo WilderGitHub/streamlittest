@@ -1,11 +1,11 @@
 import streamlit as st
 import pandas as pd
-x = st.slider('Nivel de confianza',3,10)
+x = st.slider('head',3,10)
 st.write(x, 'cuadradito', x * x)
 
 #@st.cache
 #def cargar():
 #    tienda = pd.read_csv("store_data.csv")
 #    return tienda
-tienda = st.cache(pd.read_csv)("store_data.csv", header=None)
+tienda = st.cache(pd.read_csv)("vuelosTrain.csv", header=None)
 st.dataframe(tienda.head(x))

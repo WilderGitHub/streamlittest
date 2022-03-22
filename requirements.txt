@@ -1,2 +1,1 @@
-matplotlib
-matplotlib.pyplot
+git@github.com:matplotlib/matplotlib.git
